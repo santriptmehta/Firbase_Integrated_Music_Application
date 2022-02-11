@@ -5,6 +5,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.plcoding.spotifycloneyt.R
+import com.plcoding.spotifycloneyt.exoPlayer.MusicServiceConnection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,8 +20,8 @@ object AppModule {
     @Singleton
     @Provides
     fun provideMusicServiceConnection(
-        @ApplicationContext
-    )
+        @ApplicationContext context: Context
+    ) = MusicServiceConnection(context)
 
     @Provides
     @Singleton
