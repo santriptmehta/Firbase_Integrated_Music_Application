@@ -35,10 +35,10 @@ class MusicService : MediaBrowserServiceCompat() {
     lateinit var dataSoureceFactory: DefaultDataSourceFactory
 
     @Inject
-    lateinit var firebaseMusicSource: FirebaseMusicSource
+    lateinit var exoPlayer: SimpleExoPlayer
 
     @Inject
-    lateinit var exoPlayer: SimpleExoPlayer
+    lateinit var firebaseMusicSource: FirebaseMusicSource
 
     private lateinit var musicNotificationManager: MusicNotificationManager
 
